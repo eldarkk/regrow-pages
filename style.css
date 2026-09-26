@@ -1,0 +1,59 @@
+/* Страницы Regrow: палитра «Масло и мёд» (design/tokens.json). */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap');
+
+:root {
+  --bg: #FFF8DF;
+  --card: #FFFFFF;
+  --tint: #FFEDB0;
+  --line: #F0DFA8;
+  --shadow: #EFD68A;
+  --text: #2B2114;
+  --muted: #6E5E45;
+  --accent: #A84F00;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 'Nunito', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+h1 { font-weight: 900; font-size: 40px; line-height: 1.1; margin: 8px 0 6px; }
+h2 { font-weight: 900; font-size: 24px; margin: 40px 0 8px; }
+h3 { font-weight: 800; font-size: 19px; margin: 24px 0 4px; }
+p, li { margin: 0 0 12px; }
+ul { padding-left: 22px; }
+a { color: var(--accent); font-weight: 700; }
+em { font-style: normal; font-weight: 700; }
+
+.meta { color: var(--muted); font-weight: 600; margin-bottom: 28px; }
+.lang { text-align: right; margin: 0; font-size: 15px; }
+
+.card {
+  background: var(--card);
+  border-radius: 24px;
+  padding: 20px 22px;
+  margin: 16px 0;
+  box-shadow: 0 5px 0 var(--shadow);
+}
+.card h3 { margin-top: 0; }
+
+.hero {
+  display: flex; align-items: center; gap: 18px; margin-bottom: 8px;
+}
+.hero img { width: 76px; height: 76px; border-radius: 18px; box-shadow: 0 4px 0 var(--shadow); }
+
+@media (max-width: 480px) {
+  h1 { font-size: 32px; }
+  main { padding-top: 32px; }
+}
