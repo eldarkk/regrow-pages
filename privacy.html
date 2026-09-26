@@ -12,7 +12,7 @@
 <h1>Privacy Policy</h1>
 <p class="meta">Regrow: Breakup Recovery · effective 26 September 2026</p>
 
-<p>Regrow is a no-contact tracker for people getting through a breakup. It is built so that the most personal things you write never leave your phone. This policy explains what stays on your device, the little that is sent to service providers, and how to control it.</p>
+<p>Regrow is a no-contact tracker for people getting through a breakup. It is built so that the most personal things you write never leave your phone; the one exception is the optional “Talk” support chat, which needs a server to work and has its own section below. This policy explains what stays on your device, the little that is sent to service providers, and how to control it.</p>
 
 <h2>Who we are</h2>
 <p>Regrow is developed by Yeldar Kaldybayev, an individual developer based in Astana, Kazakhstan (“we”). Contact: <a href="mailto:eldarkk@gmail.com">eldarkk@gmail.com</a>.</p>
@@ -29,10 +29,19 @@
 <p>Regrow does not use the advertising identifier (IDFA), does not track you across other apps or websites, and has advertising features turned off.</p>
 
 <h3>Crash reports — Firebase Crashlytics (Google)</h3>
-<p>If the app crashes, a report with technical details (stack trace, device model, iOS and app version, an installation identifier) is sent so we can fix the problem. Crash reports contain no content you have written. They follow the same choice as statistics; if you decline, crash reports saved on the phone are deleted.</p>
+<p>If the app crashes, a report with technical details (stack trace, device model, iOS and app version, an installation identifier) is sent so we can fix the problem. Crash reports contain no content you have written. They follow the same choice as statistics; if you decline, crash reports saved on the phone are deleted. In TestFlight beta versions, crash reports are collected regardless of this choice, so we can fix bugs before release; they still contain nothing you have written.</p>
 
 <h3>Purchases — Apple and RevenueCat</h3>
 <p>Payments are processed by Apple; we never see your payment details. To check whether Regrow Premium is active, the app uses RevenueCat, which receives an anonymous app user identifier and your App Store transaction information. No name or email is sent.</p>
+
+<h2>Support chat “Talk”</h2>
+<p>“Talk” in SOS is a text chat with an AI companion that helps you get through the urge to write to your ex. It is the only part of Regrow that cannot work on your phone alone. Nothing is sent until you open a conversation, and it uses two service providers:</p>
+<h3>Our server — Supabase (Frankfurt, Germany)</h3>
+<p>When you first open the chat, the app creates an anonymous account: a random identifier with no name, email or phone number. During a conversation the server receives your messages, the app language, the pronoun settings you chose in setup, your current day count and whether you are on a break, your time zone and which button started the conversation. Nothing else: your journal, letters, reasons and moods never go there.</p>
+<p>Conversations are kept only while they are running: they end after 30 minutes of silence and are deleted from the server no later than 24 hours after they started. What remains is a count of conversations per week (to apply the weekly limit) and technical logs without any message text: model name, token counts and timings. We don’t read conversations.</p>
+<h3>The AI model — Anthropic (Claude)</h3>
+<p>To write replies, the server sends the messages of the current conversation to Anthropic’s API, which processes them in the United States. Under Anthropic’s commercial terms these messages are not used to train its models and are normally deleted within 30 days. A second, smaller model checks each message for signs of danger to you or from someone else, so the app can show helplines and the local emergency number instead of an AI reply.</p>
+<p>The summary you may save at the end of a conversation is stored only on your phone, like the rest of your journal. The anonymous chat identifier is also passed to RevenueCat so the server can tell whether Premium is active. The chat is not a person and not therapy; if you are in danger, call the emergency number.</p>
 
 <h2>Things that happen only when you choose</h2>
 <ul>
@@ -46,12 +55,13 @@
 <p>Anonymous statistics and crash reports are processed only with your consent, which you can withdraw at any time in the app. Purchase verification is necessary to provide the subscription you bought.</p>
 
 <h2>Where data is processed and how long it is kept</h2>
-<p>Google (Firebase) and RevenueCat may process data in the United States and other countries under their standard data protection terms, including the EU Standard Contractual Clauses. Firebase Analytics event data is kept for up to 14 months; Crashlytics reports for up to 90 days; RevenueCat keeps transaction records for as long as needed to provide and account for purchases.</p>
+<p>Google (Firebase) and RevenueCat may process data in the United States and other countries under their standard data protection terms, including the EU Standard Contractual Clauses. Firebase Analytics event data is kept for up to 14 months; Crashlytics reports for up to 90 days; RevenueCat keeps transaction records for as long as needed to provide and account for purchases. Our chat server runs on Supabase in Frankfurt (EU); Anthropic processes chat messages in the United States under its commercial terms, including the EU Standard Contractual Clauses. Conversations are deleted from our server within 24 hours; Anthropic normally deletes them within 30 days.</p>
 
 <h2>Your choices and rights</h2>
 <ul>
 <li>Withdraw consent to statistics and crash reports: <em>Me → Share anonymous usage stats</em>.</li>
 <li>Delete everything on your phone: <em>Me → Delete everything</em>, or delete the app.</li>
+<li>Delete your chat data now: <em>Me → Delete everything</em> also removes the anonymous chat account and everything stored for it on our server. Without internet, the server deletes conversations on its own within 24 hours.</li>
 <li>Because we don’t have accounts, we can’t link statistics to you by name. If you would like us to delete analytics data associated with your installation, email us and we will explain how to find your app instance identifier.</li>
 <li>Depending on where you live (for example in the EU, UK or California), you may have rights to access, correct, delete or object to processing of your data, and to complain to your local data protection authority.</li>
 </ul>
